@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Private Video</title>
+<style>
+body{
+background:#111;
+color:white;
+font-family:Arial;
+text-align:center;
+padding-top:80px;
+}
+input,button{
+padding:10px;
+font-size:18px;
+}
+video{
+display:none;
+width:80%;
+margin-top:20px;
+}
+</style>
+</head>
+<body>
+
+<h2>Enter Password</h2>
+
+<input type="password" id="pass" placeholder="Password">
+<button onclick="check()">Watch</button>
+
+<br><br>
+
+<video id="vid" controls>
+<source src="YOUR_VIDEO_LINK.mp4" type="video/mp4">
+</video>
+
+<script>
+function check(){
+if(document.getElementById("pass").value=="12345"){
+document.getElementById("vid").style.display="block";
+}else{
+alert("Wrong Password");
+}
+}
+</script>
+
+</body>
+</html>
